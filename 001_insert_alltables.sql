@@ -40,7 +40,7 @@ INSERT GRUPO5.TB_ASESOR ([asesor_id], [nombre],[fecha_nac], [agencia_id]) VALUES
 GO
 INSERT GRUPO5.TB_ASESOR ([asesor_id], [nombre],[fecha_nac], [agencia_id]) VALUES (7,'GASTIABURU VEGAS, FABRICIO FROILAN','09/07/1977',7)
 GO
-INSERT GRUPO5.TB_ASESOR ([asesor_id], [nombre],[fecha_nac], [agencia_id]) VALUES (8,'PEÑA VALDIVIA, CARMEN RAQUEL','04/02/1962',8)
+INSERT GRUPO5.TB_ASESOR ([asesor_id], [nombre],[fecha_nac], [agencia_id]) VALUES (8,'PEÃ‘A VALDIVIA, CARMEN RAQUEL','04/02/1962',8)
 GO
 INSERT GRUPO5.TB_ASESOR ([asesor_id], [nombre],[fecha_nac], [agencia_id]) VALUES (9,'HERRERA RAMBLA CASTRO, MANUEL GUILLERMO','03/06/1988',9)
 GO
@@ -59,13 +59,13 @@ INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) 
 GO
 INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (24,'UNIVERSITY LIFE 14',53.9,4)
 GO
-INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (25,'AP DEV 10 AÑOS SOLES',84.75,2)
+INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (25,'AP DEV 10 AÃ‘OS SOLES',84.75,2)
 GO
 INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (26,'TOTAL BENEFIT',14.52,5)
 GO
-INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (27,'AP DEV 15 AÑOS SOLES',50.85,2)
+INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (27,'AP DEV 15 AÃ‘OS SOLES',50.85,2)
 GO
-INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (28,'AP DEV 20 AÑOS SOLES',38.13,2)
+INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (28,'AP DEV 20 AÃ‘OS SOLES',38.13,2)
 GO
 INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (29,'UNIVERSITY LIFE 16',45.87,4)
 GO
@@ -151,43 +151,43 @@ GO
 
 --07 INSERT TABLE GRUPO5.[TB_ORDEN_DETALLE]
 
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,1,2500)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (20,1,2500)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (2,2,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (21,2,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (3,3,1500)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (22,3,1500)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (4,4,800)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (23,4,800)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (5,5,3000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (24,5,3000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,6,2500)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (25,6,2500)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (3,7,1500)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (26,7,1500)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (5,8,3000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (27,8,3000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (2,9,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (28,9,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (4,10,800)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (29,10,800)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,11,2500)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (20,11,2500)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (2,12,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (21,12,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (3,13,1500)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (22,13,1500)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (4,14,800)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (23,14,800)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,15,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (24,15,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,16,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (25,16,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,17,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (26,17,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,18,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (27,18,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,19,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (28,19,1000)
 GO
-INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (1,20,1000)
+INSERT GRUPO5.TB_ORDEN_DETALLE([producto_id], [orden_id],[cantidad]) VALUES (29,20,1000)
 GO
