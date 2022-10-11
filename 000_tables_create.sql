@@ -101,20 +101,26 @@ go
 
 --FOREING KEYS
 
-alter table GRUPO5.TB_ORDEN_DETALLEadd constraint FK_TB_ORDEN_DETALLE foreign key (orden_id) references GRUPO5.TB_ORDEN_DE_SERVICIO (orden_id)
+alter table GRUPO5.TB_ORDEN_DETALLE
+add constraint FK_TB_ORDEN_DETALLE foreign key (orden_id) references GRUPO5.TB_ORDEN_DE_SERVICIO (orden_id)
 go
 
-alter table GRUPO5.TB_ORDEN_DETALLEadd constraint FK_TB_ORDEN_DETALLE_PROD foreign key (producto_id) references GRUPO5.TB_PRODUCTO(producto_id)
+alter table GRUPO5.TB_ORDEN_DETALLE
+add constraint FK_TB_ORDEN_DETALLE_PROD foreign key (producto_id) references GRUPO5.TB_PRODUCTO(producto_id)
 go
 
-alter table GRUPO5.TB_PRODUCTOadd constraint FK_TB_PRODUCTO foreign key (tipo_producto_id) references GRUPO5.TB_TIPO_PRODUCTO (tipo_producto_id)
+alter table GRUPO5.TB_PRODUCTO
+add constraint FK_TB_PRODUCTO foreign key (tipo_producto_id) references GRUPO5.TB_TIPO_PRODUCTO (tipo_producto_id)
 go
 
-alter table GRUPO5.TB_ASESORadd constraint FK_TB_ASESOR foreign key (agencia_id) references GRUPO5.TB_AGENCIA (agencia_id)
+alter table GRUPO5.TB_ASESOR
+add constraint FK_TB_ASESOR foreign key (agencia_id) references GRUPO5.TB_AGENCIA (agencia_id)
 go
 
-alter table GRUPO5.TB_ORDEN_DE_SERVICIOadd constraint FK_TB_ORDEN_DE_SERVICIO_CLIENTE foreign key (cliente_id) references GRUPO5.TB_CLIENTE (cliente_id)
+alter table GRUPO5.TB_ORDEN_DE_SERVICIO
+add constraint FK_TB_ORDEN_DE_SERVICIO_CLIENTE foreign key (cliente_id) references GRUPO5.TB_CLIENTE (cliente_id)
 go
 
-alter table GRUPO5.TB_ORDEN_DE_SERVICIOadd constraint FK_TB_ORDEN_DE_SERVICIO_ASESOR foreign key (asesor_id) references GRUPO5.TB_ASESOR (asesor_id)
+alter table GRUPO5.TB_ORDEN_DE_SERVICIO
+add constraint FK_TB_ORDEN_DE_SERVICIO_ASESOR foreign key (asesor_id) references GRUPO5.TB_ASESOR (asesor_id)
 go
