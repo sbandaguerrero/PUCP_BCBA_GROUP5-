@@ -47,7 +47,21 @@ GO
 INSERT GRUPO5.TB_ASESOR ([asesor_id], [nombre],[fecha_nac], [agencia_id]) VALUES (10,'RODRIGUEZ ACOSTA, MARITZA ELENA','05/05/1983',10)
 GO
 
---03 INSERT TABLE GRUPO5.[TB_PRODUCTO]
+
+--03 INSERT TABLE GRUPO5.[TB_TIPO_PRODUCTO]
+
+INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (1,'SEGURO DE VIDA')
+GO
+INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (2,'RETIRO')
+GO
+INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (3,'AHORRO')
+GO
+INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (4,'UNIVERSITARIO')
+GO
+INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (5,'SEGURO ACCIDENTES Y VIDA')
+GO
+
+--04 INSERT TABLE GRUPO5.[TB_PRODUCTO]
 
 INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (20,'VIVA SEGURO',17.96,1)
 GO
@@ -70,18 +84,6 @@ GO
 INSERT GRUPO5.TB_PRODUCTO ([producto_id], [nombre],[valor], [tipo_producto_id]) VALUES (29,'UNIVERSITY LIFE 16',45.87,4)
 GO
 
---04 INSERT TABLE GRUPO5.[TB_TIPO_PRODUCTO]
-
-INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (1,'SEGURO DE VIDA')
-GO
-INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (2,'RETIRO')
-GO
-INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (3,'AHORRO')
-GO
-INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (4,'UNIVERSITARIO')
-GO
-INSERT GRUPO5.TB_TIPO_PRODUCTO([tipo_producto_id], [nombre]) VALUES (5,'SEGURO ACCIDENTES Y VIDA')
-GO
 
 --05 INSERT TABLE GRUPO5.[TB_CLIENTE]
 
@@ -110,43 +112,43 @@ GO
 
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (1,1,1,'05/01/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (2,2,2,'31/10/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (2,2,2,'10/31/2021')
 GO
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (3,3,3,'9/04/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (4,4,4,'23/09/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (4,4,4,'09/23/2021')
 GO
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (5,5,5,'9/03/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (6,6,6,'26/08/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (6,6,6,'08/26/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (7,7,7,'16/12/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (7,7,7,'12/16/2021')
 GO
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (8,8,8,'2/06/2021')
 GO
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (9,9,9,'7/03/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (10,2,10,'24/07/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (10,2,10,'07/24/2021')
 GO
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (11,4,1,'5/11/2021')
 GO
 INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (12,6,3,'6/09/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (13,8,5,'24/10/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (13,8,5,'10/24/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (14,10,7,'20/12/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (14,10,7,'12/20/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (15,1,9,'28/01/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (15,1,9,'01/28/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (16,3,2,'16/02/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (16,3,2,'02/16/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (17,5,4,'27/05/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (17,5,4,'05/27/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (18,7,6,'29/11/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (18,7,6,'11/29/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (19,9,8,'8/08/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (19,9,8,'08/08/2021')
 GO
-INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (20,2,10,'20/10/2021')
+INSERT GRUPO5.TB_ORDEN_DE_SERVICIO([orden_id], [cliente_id],[asesor_id],[fecha]) VALUES (20,2,10,'10/20/2021')
 GO
 
 --07 INSERT TABLE GRUPO5.[TB_ORDEN_DETALLE]
