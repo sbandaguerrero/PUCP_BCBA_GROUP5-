@@ -1,17 +1,19 @@
---use bcba
+--use data base grupo 5
+--servidor: grupo5-ba-pucp.database.windows.net
+--user: grupo5.businessanalytics password: P4ssw0rd
 --go
 
-IF OBJECT_ID('GRUPO5.TB_ORDEN_DETALLE') IS NOT NULL DROP TABLE GRUPO5.TB_ORDEN_DETALLE;
-IF OBJECT_ID('GRUPO5.TB_ORDEN_DE_SERVICIO') IS NOT NULL DROP TABLE GRUPO5.TB_ORDEN_DE_SERVICIO;
-IF OBJECT_ID('GRUPO5.TB_CLIENTE') IS NOT NULL DROP TABLE GRUPO5.TB_CLIENTE;
-IF OBJECT_ID('GRUPO5.TB_PRODUCTO') IS NOT NULL DROP TABLE GRUPO5.TB_PRODUCTO;
-IF OBJECT_ID('GRUPO5.TB_ASESOR') IS NOT NULL DROP TABLE GRUPO5.TB_ASESOR;
-IF OBJECT_ID('GRUPO5.TB_AGENCIA') IS NOT NULL DROP TABLE GRUPO5.TB_AGENCIA;
-IF OBJECT_ID('GRUPO5.TB_TIPO_PRODUCTO') IS NOT NULL DROP TABLE GRUPO5.TB_TIPO_PRODUCTO;
+IF OBJECT_ID('TB_ORDEN_DETALLE') IS NOT NULL DROP TABLE TB_ORDEN_DETALLE;
+IF OBJECT_ID('TB_ORDEN_DE_SERVICIO') IS NOT NULL DROP TABLE TB_ORDEN_DE_SERVICIO;
+IF OBJECT_ID('TB_CLIENTE') IS NOT NULL DROP TABLE TB_CLIENTE;
+IF OBJECT_ID('TB_PRODUCTO') IS NOT NULL DROP TABLE TB_PRODUCTO;
+IF OBJECT_ID('TB_ASESOR') IS NOT NULL DROP TABLE TB_ASESOR;
+IF OBJECT_ID('TB_AGENCIA') IS NOT NULL DROP TABLE TB_AGENCIA;
+IF OBJECT_ID('TB_TIPO_PRODUCTO') IS NOT NULL DROP TABLE TB_TIPO_PRODUCTO;
 
 --TABLAS
 
-create table GRUPO5.TB_CLIENTE 
+create table TB_CLIENTE 
 (
 	cliente_id INT	not null,
 	nombre VARCHAR(100)	not null,
@@ -22,7 +24,7 @@ create table GRUPO5.TB_CLIENTE
 )
 go
 
-create table GRUPO5.TB_PRODUCTO
+create table TB_PRODUCTO
 (
 	producto_id INT	not null,
 	nombre VARCHAR(100)	not null,
@@ -31,14 +33,14 @@ create table GRUPO5.TB_PRODUCTO
 )
 go
 
-create table GRUPO5.TB_AGENCIA
+create table TB_AGENCIA
 (
 	agencia_id INT	not null,
 	nombre VARCHAR(100)	not null
 )
 go
 
-create table GRUPO5.TB_ASESOR
+create table TB_ASESOR
 (
 	asesor_id INT not null,
 	nombre VARCHAR(100)	not null,
@@ -47,7 +49,7 @@ create table GRUPO5.TB_ASESOR
 )
 go
 
-create table GRUPO5.TB_ORDEN_DETALLE
+create table TB_ORDEN_DETALLE
 (
 	producto_id INT	not null,
 	orden_id INT	not null,
@@ -55,7 +57,7 @@ create table GRUPO5.TB_ORDEN_DETALLE
 )
 go
 
-create table GRUPO5.TB_ORDEN_DE_SERVICIO
+create table TB_ORDEN_DE_SERVICIO
 (
 	orden_id INT	not null,
 	cliente_id INT	not null,
@@ -64,7 +66,7 @@ create table GRUPO5.TB_ORDEN_DE_SERVICIO
 )
 go
 
-create table GRUPO5.TB_TIPO_PRODUCTO
+create table TB_TIPO_PRODUCTO
 (
 	tipo_producto_id INT	not null,
 	nombre VARCHAR(100)	not null
@@ -74,53 +76,53 @@ go
 --LLAVES PRIMARIAS
 
 
-alter table GRUPO5.TB_ORDEN_DE_SERVICIO
+alter table TB_ORDEN_DE_SERVICIO
 add constraint PK_TB_ORDEN_DE_SERVICIO primary key (orden_id)
 go
 
-alter table GRUPO5.TB_CLIENTE 
+alter table TB_CLIENTE 
 add constraint PK_TB_CLIENTE primary key (cliente_id)
 go
 
-alter table GRUPO5.TB_PRODUCTO
+alter table TB_PRODUCTO
 add constraint PK_TB_PRODUCTO primary key (producto_id)
 go
 
-alter table GRUPO5.TB_AGENCIA
+alter table TB_AGENCIA
 add constraint PK_TB_AGENCIA primary key (agencia_id)
 go
 
-alter table GRUPO5.TB_ASESOR
+alter table TB_ASESOR
 add constraint PK_TB_ASESOR primary key (asesor_id)
 go
 
-alter table GRUPO5.TB_TIPO_PRODUCTO
+alter table TB_TIPO_PRODUCTO
 add constraint PK_TB_TIPO_PRODUCTO primary key (tipo_producto_id)
 go
 
 
 --FOREING KEYS
 
-alter table GRUPO5.TB_ORDEN_DETALLE
-add constraint FK_TB_ORDEN_DETALLE foreign key (orden_id) references GRUPO5.TB_ORDEN_DE_SERVICIO (orden_id)
+alter table TB_ORDEN_DETALLE
+add constraint FK_TB_ORDEN_DETALLE foreign key (orden_id) references TB_ORDEN_DE_SERVICIO (orden_id)
 go
 
-alter table GRUPO5.TB_ORDEN_DETALLE
-add constraint FK_TB_ORDEN_DETALLE_PROD foreign key (producto_id) references GRUPO5.TB_PRODUCTO(producto_id)
+alter table TB_ORDEN_DETALLE
+add constraint FK_TB_ORDEN_DETALLE_PROD foreign key (producto_id) references TB_PRODUCTO(producto_id)
 go
 
-alter table GRUPO5.TB_PRODUCTO
-add constraint FK_TB_PRODUCTO foreign key (tipo_producto_id) references GRUPO5.TB_TIPO_PRODUCTO (tipo_producto_id)
+alter table TB_PRODUCTO
+add constraint FK_TB_PRODUCTO foreign key (tipo_producto_id) references TB_TIPO_PRODUCTO (tipo_producto_id)
 go
 
-alter table GRUPO5.TB_ASESOR
-add constraint FK_TB_ASESOR foreign key (agencia_id) references GRUPO5.TB_AGENCIA (agencia_id)
+alter table TB_ASESOR
+add constraint FK_TB_ASESOR foreign key (agencia_id) references TB_AGENCIA (agencia_id)
 go
 
-alter table GRUPO5.TB_ORDEN_DE_SERVICIO
-add constraint FK_TB_ORDEN_DE_SERVICIO_CLIENTE foreign key (cliente_id) references GRUPO5.TB_CLIENTE (cliente_id)
+alter table TB_ORDEN_DE_SERVICIO
+add constraint FK_TB_ORDEN_DE_SERVICIO_CLIENTE foreign key (cliente_id) references TB_CLIENTE (cliente_id)
 go
 
-alter table GRUPO5.TB_ORDEN_DE_SERVICIO
-add constraint FK_TB_ORDEN_DE_SERVICIO_ASESOR foreign key (asesor_id) references GRUPO5.TB_ASESOR (asesor_id)
+alter table TB_ORDEN_DE_SERVICIO
+add constraint FK_TB_ORDEN_DE_SERVICIO_ASESOR foreign key (asesor_id) references TB_ASESOR (asesor_id)
 go
